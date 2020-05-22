@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+button{
+  margin:2%;
+  width: 75px;
+}
+
+.jokes{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.joke{
+  width: 25%;
+  margin: 2%;
+  padding: 2%;
+  border: 1px dashed cadetblue;
+  border-radius: 15px;
+  background-color: antiquewhite;
+}

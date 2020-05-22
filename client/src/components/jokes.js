@@ -15,7 +15,7 @@ const Jokes = () => {
     },[])
     return(
         <div className="jokes">
-            {!jokes && (<div>Loading</div>)}
+            {!jokes.length > 0 && (<div>Loading</div>)}
             {jokes.map(item => {
                 return(
                     <div className="joke">

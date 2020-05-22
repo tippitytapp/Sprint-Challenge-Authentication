@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {useHistory} from "react-router-dom";
 import axios from 'axios';
 
@@ -23,6 +23,7 @@ function Login(){
     }
     return(
         <div className="login-form">
+            <h2>Login</h2>
             <form onSubmit={submitLogin}>
                 <label htmlFor="username">Username:</label> <br />
                 <input 

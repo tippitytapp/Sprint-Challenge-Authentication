@@ -1,15 +1,19 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
+import {useHistory} from "react-router-dom";
 
 function Register(){
     const [user, setUser] = useState({})
+    const {push} = useHistory()
 
-    const submitLogin = e => {
+    const submitRegister = e => {
         e.preventDefault();
         axios
             .post('http://localhost:5378/api/auth/register', user)
             .then(res => {
                 console.log(res)
+                push('/login')
+
             })
     }
 
@@ -20,7 +24,9 @@ function Register(){
     }
     return(
         <div className="login-form">
-            <form onSubmit={submitLogin}>
+
+            <h2>Register</h2>
+            <form onSubmit={submitRegister}>
                 <label htmlFor="username">Username:</label> <br />
                 <input 
                     type="text" 
@@ -39,7 +45,7 @@ function Register(){
                     value = {user.password}
                     onChange={inputChange} 
                     /> <br />
-                <button>Login</button>
+                <button>Register</button>
             </form>
         </div>
     )
