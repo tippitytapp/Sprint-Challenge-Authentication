@@ -7,7 +7,6 @@ router.post('/register', validate, (req, res) => {
   // implement registration
   const user = req.body;
   const newUser = passHash(user)
-  console.log(newUser)
   Users.add(newUser)
       .then(user => {
           res.status(201).json({
