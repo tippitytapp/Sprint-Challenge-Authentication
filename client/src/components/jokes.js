@@ -15,6 +15,7 @@ const Jokes = () => {
     },[])
     return(
         <div className="jokes">
+            {!jokes && (<div>Loading</div>)}
             {jokes.map(item => {
                 return(
                     <div className="joke">
